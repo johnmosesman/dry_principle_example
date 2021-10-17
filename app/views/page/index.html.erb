@@ -1,2 +1,21 @@
-<h1 class='text-2xl text-red-900'>Page#index</h1>
-<p>Find me in app/views/page/index.html.erb</p>
+<%# Makes the template cleaner in the slides %>
+<% animal = @animal %>
+<% car = @car %>
+
+<div class="mx-auto max-w-4xl mt-12 p-8">
+  <h1 class='text-2xl text-gray-900 mb-4'>John's Marketplace of Things</h1>
+
+  <div class="flex flex-row">
+    <div class='flex flex-col justify-between border border-gray-200 rounded-lg p-4 w-48 mr-4'>
+      <p class='text-xl'><%= animal.name %></p>
+      <img class='h-24 my-4 rounded-lg' src='<%= animal.image %>' />
+      <p class='bg-green-600 text-white font-semibold rounded-lg px-4 py-2 text-center'>Buy for $<%= animal.price %></p>
+    </div>
+
+    <div class='flex flex-col justify-between border border-gray-200 rounded-lg p-4 w-48'>
+      <p class='text-xl'><%= car.name %></p>
+      <img class='h-24 my-4 rounded-lg' src='<%= car.image %>' />
+      <p class='bg-green-600 text-white font-semibold rounded-lg px-4 py-2 text-center'>Buy for $<%= car.price %></p>
+    </div>
+  </div>
+</div>
